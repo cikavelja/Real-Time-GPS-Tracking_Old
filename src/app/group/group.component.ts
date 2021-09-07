@@ -8,6 +8,7 @@ import { Location } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
 import { SecurityService } from '../security/security.service';
 import { RtgpsService } from '../notify/rtgps.service';
+import { Group } from './GroupModel';
 
 @Component({
   selector: 'rtgpsang-group',
