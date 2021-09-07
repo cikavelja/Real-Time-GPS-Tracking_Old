@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { CONFIGURATION } from '../app.constants';
 import { gpsPosition } from './gpsPosition';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({

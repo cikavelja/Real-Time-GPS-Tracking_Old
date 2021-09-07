@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { CONFIGURATION } from '../app.constants';
 import { GPSData } from './GPSData';
-import { MSGData } from './MSGData';
+
 import { Observable } from 'rxjs';
 
 @Injectable({

@@ -11,9 +11,11 @@ import { Router } from '@angular/router';
 
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import { SecurityService } from 'src/app/security/security.service';
+
 import { ToastrService } from 'ngx-toastr';
-import { LoaderserviceService } from 'src/app/shared/loaderservice.service';
+
+import { SecurityService } from '../../security/security.service';
+import { LoaderserviceService } from '../../shared/loaderservice.service';
 
 @Injectable()
 export class HttpConfigInterceptor implements HttpInterceptor {

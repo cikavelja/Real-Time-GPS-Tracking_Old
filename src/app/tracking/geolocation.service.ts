@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { gpsPosition } from './gpsPosition';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class GeolocationService {
   }
 
 
-  getCurrentPosition(): Observable<Position> {
+  getCurrentPosition(): Observable<gpsPosition> {
     return Observable.create(obs => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -43,7 +44,7 @@ export class GeolocationService {
       }
     });
   }
-  watchPosition(): Observable<Position> {
+  watchPosition(): Observable<gpsPosition> {
     return Observable.create(obs => {
       if (navigator.geolocation) {
         navigator.geolocation.watchPosition(

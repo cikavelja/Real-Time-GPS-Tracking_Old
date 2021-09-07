@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Group } from './group';
+//import { Group } from './group';
 import { GroupService } from './group-service.service';
 import { AppUser } from '../security/app-user';
 import { group } from '@angular/animations';

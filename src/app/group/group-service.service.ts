@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Group } from './group';
 import { AppUser } from '../security/app-user';

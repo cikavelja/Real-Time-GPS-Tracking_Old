@@ -1,5 +1,4 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { MSGData } from './MSGData';
 import { RtgpsService } from './rtgps.service';
 import { GPSData } from './GPSData';
 import { LoaderService } from '../location/loader.service';
@@ -8,7 +7,7 @@ import { TrackerService } from '../tracking/tracker.service';
 import { GeolocationService } from '../tracking/geolocation.service';
 import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
-import 'rxjs/add/observable/interval';
+//import 'rxjs/add/observable/interval';
 
 declare var ol: any;
 

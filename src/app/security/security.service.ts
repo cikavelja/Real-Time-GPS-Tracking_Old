@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AppUserAuth } from './app-user-auth';
 import { AppUser } from './app-user';
-import { Observable } from 'rxjs';
-import { of } from 'rxjs/observable/of';
+import { Observable, tap } from 'rxjs';
+import { of } from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
-import { tap } from 'rxjs/operators/tap';
+
 import { Router } from '@angular/router';
 import { CONFIGURATION } from '../app.constants';
 
