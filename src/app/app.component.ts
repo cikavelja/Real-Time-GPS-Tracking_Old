@@ -1,10 +1,31 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
+import { AppUserAuth } from './security/app-user-auth';
+import { SecurityService } from './security/security.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  selector: 'ptc-root',
+  templateUrl: './app.component.html'
 })
-export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+export class AppComponent {
+  title: string = "Nenad's Real-Time GPS Tracker";
+  securityObject:AppUserAuth = null;
+  constructor(private securityService:SecurityService, private toastr:ToastrService){
+      this.securityObject = securityService.securityObject;
+  if (localStorage.getItem("access_token")) {
+      this.securityObject.isAuthenticated=true;
+      this.securityObject.userName=localStorage.getItem("username");
+      this.securityObject.access_token=localStorage.getItem("access_token");
+    }
+
+    
+  }
+
+
+  
+
+  private logout(): void {
+    this.securityService.logout();
+
+  }
 }
