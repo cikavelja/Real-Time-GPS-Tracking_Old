@@ -1,16 +1,16 @@
 export default "
-<div class=\ "row\">\n
-    <div class=\ "col-xs-12\">\n
-        <h1>Category List</h1>\n </div>\n</div>\n\n
-<div class=\ "row\">\n
-    <div class=\ "col-xs-12\">\n <button class=\ "btn btn-primary\">\n      Add New Category\n    </button>\n </div>\n</div>\n\n
-<div *ngIf=\ "categories && categories.length\">\n
-    <table class=\ "table table-bordered table-striped table-condensed\">\n
-        <thead>\n
-            <tr>\n
-                <th>Category ID</th>\n
-                <th>Category Name</th>\n </tr>\n </thead>\n
-        <tbody>\n
-            <tr *ngFor=\ "let category of categories\"> \n
-                <td>{{category.categoryId}}</td>\n
-                <td>{{category.categoryName}}</td>\n </tr>\n </tbody>\n </table>\n</div>\n"
+<div class="row\">
+    <div class="col-xs-12\">
+        <h1>Category List</h1> </div></div>
+<div class="row\">
+    <div class="col-xs-12\"> <button class="btn btn-primary\">      Add New Category    </button> </div></div>
+<div *ngIf="categories && categories.length\">
+    <table class="table table-bordered table-striped table-condensed\">
+        <thead>
+            <tr>
+                <th>Category ID</th>
+                <th>Category Name</th> </tr> </thead>
+        <tbody>
+            <tr *ngFor="let category of categories\"> 
+                <td>{{category.categoryId}}</td>
+                <td>{{category.categoryName}}</td> </tr> </tbody> </table></div>"
