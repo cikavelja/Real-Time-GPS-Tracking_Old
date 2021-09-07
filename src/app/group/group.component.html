@@ -1,0 +1,28 @@
+export default "
+<div class=\ "row\">\n
+    <div class=\ "col-4\">\n\n </div>\n
+    <div class=\ "col-6\">\n\n </div>\n</div>\n\n
+<main role=\ "main\">\n
+    <div class=\ "album py-5 bg-light\">\n
+        <div class=\ "container\">\n
+            <div class=\ "row\">\n
+                <div class=\ "col-md-6\">\n
+                    <div class=\ "panel panel-primary\">\n
+                        <div class=\ "panel-heading\">\n
+                            <h3 class=\ "panel-title\">Add users to group</h3>\n </div>\n
+                        <div class=\ "panel-body\">\n
+                            <div class=\ "form-group\">\n <label for=\ "search\">Search</label>\n <input id=\ "search\" class=\ "form-control\" [(ngModel)]=\ "search\" />\n </div>\n </div>\n
+                        <div class=\ "panel-footer\">\n <button class=\ "btn btn-primary\" (click)=\ "getUser()\">Search</button>\n <button class=\ "btn btn-primary\" *ngIf=\ "showAddUser\" (click)=\ "addUser()\">Add User</button>\n <button class=\ "btn btn-default\" (click)=\
+                                "cancelSearch()\">Cancel</button>\n </div>\n </div>\n </div>\n
+                <div class=\ "col-md-6\">\n
+                    <!-- {{groups | json}} -->\n\n
+                    <div *ngIf=\ "groups[0].users !== null\">\n
+                        <table class=\ "table table-bordered table-striped table-condensed\">\n
+                            <thead>\n
+                                <tr>\n
+                                    <th>Users</th>\n
+                                    <th></th>\n </tr>\n </thead>\n
+                            <tbody>\n
+                                <tr *ngFor=\ "let group of groups\">\n
+                                    <td>{{group.roomName}}</td>\n
+                                    <td><button class=\ "btn btn-default\" (click)=\ "deleteGroup(group.roomName)\">Delete</button></td>\n </tr>\n </tbody>\n </table>\n </div>\n </div>\n </div>\n </div>\n </div>\n\n</main>"

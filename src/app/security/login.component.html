@@ -1,0 +1,23 @@
+export default "
+<div class=\ "row\">\n
+    <div class=\ "col-xs-12\">\n
+        <div class=\ "alert alert-danger\" \n *ngIf=\ "securityObject &&\n             !securityObject.isAuthenticated\">\n
+            <p>Invalid User Name/Password.</p>\n </div>\n </div>\n </div>\n \n
+<!-- TEMPORARY CODE TO VIEW SECURITY OBJECT -->\n
+<div class=\ "row\">\n
+    <div class=\ "col-xs-12\">\n
+        <!-- <label>{{securityObject | json}}</label> -->\n </div>\n </div>\n \n
+<form>\n
+    <div class=\ "row\">\n
+        <div class=\ "col-xs-12 col-sm-6\">\n
+            <div class=\ "panel panel-primary\">\n
+                <div class=\ "panel-heading\">\n
+                    <h3 class=\ "panel-title\">Log in</h3>\n </div>\n
+                <div class=\ "panel-body\">\n
+                    <div class=\ "form-group\">\n <label for=\ "userName\">User Name</label>\n
+                        <div class=\ "input-group\">\n <input id=\ "userName\" name=\ "userName\" \n class=\ "form-control\" required\n [(ngModel)]=\ "user.userName\"\n autofocus=\ "autofocus\" />\n <span class=\ "input-group-addon\">\n                  <i class=\"glyphicon glyphicon-envelope\"></i>\n                </span>\n
+                            </div>\n </div>\n
+                    <div class=\ "form-group\">\n <label for=\ "password\">Password</label>\n
+                        <div class=\ "input-group\">\n <input id=\ "password\" name=\ "password\" \n class=\ "form-control\" required \n [(ngModel)]=\ "user.password\"\n type=\ "password\" />\n <span class=\ "input-group-addon\">\n                  <i class=\"glyphicon glyphicon-lock\"></i>\n                </span>\n
+                            </div>\n </div>\n </div>\n
+                <div class=\ "panel-footer\">\n <button class=\ "btn btn-primary\" (click)=\ "login()\">\n              Login\n            </button>\n </div>\n </div>\n </div>\n </div>\n </form>\n "

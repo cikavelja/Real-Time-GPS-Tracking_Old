@@ -1,0 +1,24 @@
+export default "
+<div class=\ "row\">\n
+    <div class=\ "col-xs-12\">\n
+        <h1>Product List</h1>\n </div>\n</div>\n\n
+<div class=\ "row\" *ngIf=\ "products && products.length\">\n
+    <div class=\ "col-xs-12\">\n <button class=\ "btn btn-primary\" (click)=\ "addProduct()\">\n      Add New Product\n    </button>\n </div>\n</div>\n\n
+<div *ngIf=\ "products && products.length\">\n
+    <table class=\ "table table-bordered table-striped table-condensed\">\n
+        <thead>\n
+            <tr>\n
+                <th>Edit</th>\n
+                <th>Product Name</th>\n
+                <th>Introduction Date</th>\n
+                <th class=\ "text-right\">Price</th>\n
+                <th>URL</th>\n
+                <th>Delete</th>\n </tr>\n </thead>\n
+        <tbody>\n
+            <tr *ngFor=\ "let product of products\">\n
+                <td>\n <a href=\ "#\" class=\ "btn btn-primary\" [routerLink]=\ "['/productDetail', product.productId]\">\n            <i class=\"glyphicon glyphicon-pencil\"></i>\n          </a>\n </td>\n
+                <td>{{product.productName}}</td>\n
+                <td>{{product.introductionDate | date:\"MM/dd/yyyy\"}}</td>\n
+                <td class=\ "text-right\">{{product.price | currency}}</td>\n
+                <td>{{product.url | lowercase}}</td>\n
+                <td>\n <button (click)=\ "deleteProduct(product.productId)\" class=\ "btn btn-danger\">\n            <i class=\"glyphicon glyphicon-trash\"></i>\n          </button>\n </td>\n </tr>\n </tbody>\n </table>\n</div>"
